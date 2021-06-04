@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        alert("test")
+        function receiveMessage(event) {
+            //event參數裡面有data屬性代表接收資料
+            alert(event.data.content)
+        }
+        window.onload = function() {
+            window.addEventListener("message", receiveMessage);
+        };
+
+        function postMessage()
+        {
+            //第一個參數傳出去的值,第二個參數限定的網域
+            window.parent.postMessage('iframe test','*');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="txt_show"></div>
+    <button onclick="postMessage();">submit</button>
+</body>
+
+</html>
