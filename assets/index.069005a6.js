@@ -1,0 +1,1 @@
+import{d as n,I as a,e as u,L as c}from"./vendor.f4efebb8.js";const _=n({setup(p){return a(()=>{const e=u(),t=c(),{params:o,query:s}=e,{path:r}=o;t.replace({path:"/"+r,query:s})}),(e,t)=>null}});export{_ as default};
